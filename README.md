@@ -1,7 +1,7 @@
 ### Anggota Kelompok:
-1. [Syamsudin Nur] - [035]
-2. [Muhammad Aldi Nur C.] - [020]
-3. [Rafif Rizal A. A.] - [003]
+1. [Syamsudin Nur] - [25032014035]
+2. [Muhammad Aldi Nur C.] - [25032014020]
+3. [Rafif Rizal A. A.] - [25032014003]
 
 ---
 
@@ -53,4 +53,4 @@ Karena proyek ini disimulasikan menggunakan [Wokwi](https://wokwi.com/), tidak p
 ## Video Presentasi & Demo
 Silakan tonton video presentasi kelompok kami yang menjelaskan secara detail mengenai analisis kode, demonstrasi cara kerja sistem saat mendeteksi objek, dan evaluasi arsitektur software melalui tautan berikut:
 
-**Link YouTube:** [Klik Disini](https://youtube.com/)
+**Link YouTube:** [Klik Disini](https://youtu.be/DXRQG78xs-k)
