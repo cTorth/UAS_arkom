@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 45,
+      "left": -438.8,
+      "attrs": { "color": "#eeefed" }
+    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 288.6, "left": -394.2, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": 68.7,
+      "left": -484.1,
+      "attrs": { "distance": "2" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 54,
+      "left": -159.4,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 54,
+      "left": -188.2,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 12,
+      "left": -238.2,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 137.8,
+      "left": -173.65,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 137.8,
+      "left": -202.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd2",
+      "top": 44.8,
+      "left": -80.8,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": 259.2,
+      "left": 0,
+      "attrs": {
+        "text": "Hitam = GND/Minus\nMerah = 5V/Plus\nOrange = Pin A4\nCoklat = Pin A5\nAbu-Abu = Pin 2\nKuning = Pin 3\nHijau = Pin 4\nBiru = Pin 9\nPink = Pin 10"
+      }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bb1:tn.1", "black", [ "v-19.2", "h-220.5", "v-211.1" ] ],
+    [ "uno:5V", "bb1:tp.25", "red", [ "v19.1", "h128.6", "v-451.5" ] ],
+    [ "lcd2:VCC", "bb1:tp.24", "red", [ "h-19.2", "v-47.9", "h-88" ] ],
+    [ "lcd2:GND", "bb1:tn.23", "black", [ "h-9.6", "v-48", "h-67.2", "v38.5" ] ],
+    [ "bb1:22t.b", "bb1:tn.15", "black", [ "h-38.4", "v-38.3" ] ],
+    [ "bb1:23t.e", "bb1:23b.f", "green", [ "v0" ] ],
+    [ "bb1:23b.j", "uno:4", "green", [ "v76.8", "h24.9" ] ],
+    [ "bb1:3b.j", "uno:10", "violet", [ "v67.2", "h152.9" ] ],
+    [ "bb1:2b.i", "bb1:5b.i", "blue", [ "v0" ] ],
+    [ "bb1:5b.j", "uno:9", "blue", [ "v57.6", "h144", "v48" ] ],
+    [ "bb1:26b.h", "bb1:tn.14", "black", [ "h-86.4", "v-115.1" ] ],
+    [ "bb1:29b.i", "bb1:tn.13", "black", [ "h-124.8", "v-124.7" ] ],
+    [ "bb1:30t.e", "bb1:30b.f", "gray", [ "v0" ] ],
+    [ "bb1:30b.j", "uno:2", "gray", [ "v76.8", "h-23.3" ] ],
+    [ "bb1:27t.e", "bb1:27b.f", "yellow", [ "v0" ] ],
+    [ "bb1:27b.j", "uno:3", "yellow", [ "v76.8", "h-4" ] ],
+    [ "lcd2:SDA", "bb1:24t.a", "orange", [ "h0" ] ],
+    [ "lcd2:SCL", "bb1:25t.b", "#8f4814", [ "h0" ] ],
+    [ "bb1:21b.j", "uno:A4", "orange", [ "v268.8", "h72.6" ] ],
+    [ "bb1:22b.j", "uno:A5", "#8f4814", [ "v259.2", "h72.5" ] ],
+    [ "bb1:tn.10", "bb1:12t.a", "black", [ "v0" ] ],
+    [ "bb1:4b.g", "bb1:12b.g", "black", [ "v0" ] ],
+    [ "bb1:12t.e", "bb1:12b.f", "black", [ "v0" ] ],
+    [ "bb1:1b.h", "bb1:15b.h", "red", [ "v0" ] ],
+    [ "bb1:15t.e", "bb1:15b.f", "red", [ "v0" ] ],
+    [ "bb1:tp.12", "bb1:15t.a", "red", [ "v0" ] ],
+    [ "bb1:25t.d", "bb1:21t.d", "#8f4814", [ "v0" ] ],
+    [ "led1:A", "bb1:30t.a", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:29t.a", "", [ "$bb" ] ],
+    [ "led2:A", "bb1:27t.a", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:26t.a", "", [ "$bb" ] ],
+    [ "bz1:1", "bb1:22t.a", "", [ "$bb" ] ],
+    [ "bz1:2", "bb1:23t.a", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:29t.c", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:29b.g", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:26t.c", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:26b.g", "", [ "$bb" ] ],
+    [ "ultrasonic1:VCC", "bb1:1b.f", "", [ "$bb" ] ],
+    [ "ultrasonic1:TRIG", "bb1:2b.f", "", [ "$bb" ] ],
+    [ "ultrasonic1:ECHO", "bb1:3b.f", "", [ "$bb" ] ],
+    [ "ultrasonic1:GND", "bb1:4b.f", "", [ "$bb" ] ],
+    [ "bb1:24t.c", "bb1:20t.c", "orange", [ "v0" ] ],
+    [ "bb1:20t.e", "bb1:21b.f", "orange", [ "v19.2", "h9.6", "v-9.6" ] ],
+    [ "bb1:21t.e", "bb1:22b.f", "#8f4814", [ "v9.6", "h9.6" ] ]
+  ],
+  "dependencies": {}
+}
